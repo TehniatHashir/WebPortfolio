@@ -123,9 +123,9 @@ const Portfolio = () => {
                   Learn more ↓
                 </button>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', animation: 'scaleIn 0.8s ease-out 0.2s both' }}>
+              <div className="hero-circle-container" style={{ display: 'flex', justifyContent: 'center', animation: 'scaleIn 0.8s ease-out 0.2s both' }}>
                 <div
-                  className="portfolio-icon-circle"
+                  className="portfolio-icon-circle hero-icon"
                   style={{
                     width: 280,
                     height: 280,
@@ -568,14 +568,19 @@ const Portfolio = () => {
               width: 100% !important;
             }
 
-            /* Reduce circle size on mobile */
-            .portfolio-icon-circle {
+            /* Hide the reach out circle icon completely on mobile */
+            .reach-circle-container {
+              display: none !important;
+            }
+            
+            /* Keep hero circle but make it smaller */
+            .hero-circle-container .portfolio-icon-circle {
               width: 200px !important;
               height: 200px !important;
               font-size: 60px !important;
             }
             
-            .portfolio-icon-circle svg {
+            .hero-circle-container .portfolio-icon-circle svg {
               width: 60px !important;
               height: 60px !important;
             }
@@ -654,14 +659,14 @@ const Portfolio = () => {
               padding: 10px 12px !important;
             }
 
-            /* Further reduce circle size on very small screens */
-            .portfolio-icon-circle {
+            /* Make hero circle even smaller on very small screens */
+            .hero-circle-container .portfolio-icon-circle {
               width: 150px !important;
               height: 150px !important;
               font-size: 45px !important;
             }
             
-            .portfolio-icon-circle svg {
+            .hero-circle-container .portfolio-icon-circle svg {
               width: 45px !important;
               height: 45px !important;
             }
