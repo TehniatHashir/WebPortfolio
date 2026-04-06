@@ -695,7 +695,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* Removed the image from footer - Let's work together section */}
         </div>
       </footer>
 
@@ -727,8 +726,8 @@ const Home = () => {
         @media (max-width: 1024px) {
           .hero-container {
             flex-direction: column !important;
-            gap: 40px !important;
-            padding: 40px 24px 60px !important;
+            gap: 30px !important;
+            padding: 20px 24px 60px !important;
           }
           
           .hero-image {
@@ -815,7 +814,8 @@ const Home = () => {
 
         @media (max-width: 768px) {
           .hero-container {
-            padding: 30px 16px 40px !important;
+            padding: 15px 16px 40px !important;
+            gap: 25px !important;
           }
 
           .service-cards {
@@ -883,8 +883,9 @@ const Home = () => {
           }
 
           .about-badge {
-            padding: 6px 12px !important;
-            font-size: 11px !important;
+            padding: 4px 10px !important;
+            font-size: 10px !important;
+            white-space: nowrap !important;
           }
 
           /* Mobile navbar spacing */
@@ -899,37 +900,42 @@ const Home = () => {
 
           /* Reduce button widths */
           .hero-button {
-            padding: 10px 16px !important;
-            font-size: 13px !important;
+            padding: 8px 12px !important;
+            font-size: 12px !important;
+          }
+          
+          .hero-buttons {
+            gap: 6px !important;
           }
         }
 
         @media (max-width: 480px) {
           .hero-container {
-            padding: 20px 12px 30px !important;
+            padding: 10px 12px 30px !important;
             gap: 20px !important;
           }
 
           .hero-heading {
-            font-size: 24px !important;
-            margin-bottom: 8px !important;
+            font-size: 22px !important;
+            margin-bottom: 6px !important;
           }
 
           .hero-description {
-            font-size: 14px !important;
-            margin-bottom: 20px !important;
+            font-size: 13px !important;
+            margin-bottom: 16px !important;
           }
 
           .hero-buttons {
-            gap: 8px !important;
-            flex-direction: column !important;
+            gap: 6px !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
           }
 
           .hero-button {
             width: auto !important;
-            min-width: 140px !important;
-            padding: 10px 16px !important;
-            font-size: 13px !important;
+            min-width: 120px !important;
+            padding: 8px 12px !important;
+            font-size: 11px !important;
           }
 
           .section-padding {
@@ -951,8 +957,8 @@ const Home = () => {
           }
 
           .featured-item {
-            width: 160px !important;
-            height: 100px !important;
+            width: 150px !important;
+            height: 95px !important;
           }
 
           .service-grid-container {
@@ -985,10 +991,15 @@ const Home = () => {
           }
 
           .about-image {
-            max-width: 220px !important;
-            max-height: 275px !important;
-            width: 220px !important;
-            height: 275px !important;
+            max-width: 200px !important;
+            max-height: 250px !important;
+            width: 200px !important;
+            height: 250px !important;
+          }
+
+          .about-badge {
+            padding: 4px 8px !important;
+            font-size: 9px !important;
           }
 
           .portfolio-grid {
