@@ -68,19 +68,21 @@ const About = () => {
 
           {/* Visual side with mouse parallax */}
           <div style={s.visualSide}>
-            <div style={{
-              ...s.visualCard,
-              transform: `perspective(900px) rotateY(${mouse.x * 0.4}deg) rotateX(${-mouse.y * 0.4}deg)`,
-            }}>
-              <div style={{ ...s.layer, ...s.layerBack, transform: `translate(${mouse.x * -0.3}px, ${mouse.y * -0.3}px)` }} />
-              <div style={{ ...s.layer, ...s.layerMid, transform: `translate(${mouse.x * 0.2}px, ${mouse.y * 0.2}px)` }}>
-                <span style={s.codeText}>{'<Developer />'}</span>
+            <div 
+              className="visual-card"
+              style={{
+                ...s.visualCard,
+                transform: `perspective(900px) rotateY(${mouse.x * 0.4}deg) rotateX(${-mouse.y * 0.4}deg)`,
+              }}>
+              <div className="layer" style={{ ...s.layer, ...s.layerBack, transform: `translate(${mouse.x * -0.3}px, ${mouse.y * -0.3}px)` }} />
+              <div className="layer" style={{ ...s.layer, ...s.layerMid, transform: `translate(${mouse.x * 0.2}px, ${mouse.y * 0.2}px)` }}>
+                <span className="code-text" style={s.codeText}>{'<Developer />'}</span>
               </div>
-              <div style={{ ...s.layer, ...s.layerFront, transform: `translate(${mouse.x * 0.5}px, ${mouse.y * 0.5}px)` }}>
-                <div style={s.badge}><FaReact style={{ marginRight: '6px' }} /> React</div>
-                <div style={{ ...s.badge, ...s.badge2 }}><SiTypescript style={{ marginRight: '6px' }} /> TypeScript</div>
-                <div style={{ ...s.badge, ...s.badge3 }}><FaCss3Alt style={{ marginRight: '6px' }} /> CSS3</div>
-                <div style={{ ...s.badge, ...s.badge4 }}><SiThreedotjs style={{ marginRight: '6px' }} /> Three.js</div>
+              <div className="layer" style={{ ...s.layer, ...s.layerFront, transform: `translate(${mouse.x * 0.5}px, ${mouse.y * 0.5}px)` }}>
+                <div className="badge" style={s.badge}><FaReact style={{ marginRight: '6px' }} /> React</div>
+                <div className="badge badge2" style={{ ...s.badge, ...s.badge2 }}><SiTypescript style={{ marginRight: '6px' }} /> TypeScript</div>
+                <div className="badge badge3" style={{ ...s.badge, ...s.badge3 }}><FaCss3Alt style={{ marginRight: '6px' }} /> CSS3</div>
+                <div className="badge badge4" style={{ ...s.badge, ...s.badge4 }}><SiThreedotjs style={{ marginRight: '6px' }} /> Three.js</div>
               </div>
             </div>
           </div>
@@ -195,7 +197,7 @@ const About = () => {
           overflow-x: hidden;
         }
 
-        /* Mobile Responsive Styles - Only for mobile, desktop unchanged */
+        /* Mobile Responsive Styles */
         @media (max-width: 768px) {
           /* Decrease white developer card size */
           .visual-card {
@@ -203,7 +205,7 @@ const About = () => {
             height: 340px !important;
           }
           
-          .layer {
+          .visual-card .layer {
             border-radius: 20px !important;
           }
           
@@ -218,6 +220,8 @@ const About = () => {
           
           .badge svg {
             font-size: 0.7rem !important;
+            width: 12px !important;
+            height: 12px !important;
           }
           
           /* Make tools grid 2 cards per row */
@@ -247,6 +251,8 @@ const About = () => {
           
           .badge svg {
             font-size: 0.6rem !important;
+            width: 10px !important;
+            height: 10px !important;
           }
           
           .code-text {
