@@ -49,8 +49,8 @@ const Skills = () => {
 
   return (
     <PageTransition>
-         <Navbar />
-         <SplashCursor />
+      <Navbar />
+      <SplashCursor />
       <div style={cs.page}>
         <div style={cs.bgShape} />
         <div style={cs.bgShape2} />
@@ -112,8 +112,6 @@ const Skills = () => {
             </div>
           </div>
         </section>
-
-        
       </div>
 
       <style>{`
@@ -126,13 +124,141 @@ const Skills = () => {
           0%, 100% { opacity: 0.4; }
           50% { opacity: 0.6; }
         }
+        
+        /* Prevent horizontal scroll on all devices */
+        html, body {
+          overflow-x: hidden !important;
+          width: 100% !important;
+          position: relative !important;
+        }
+        
         * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
         }
+        
         body {
           overflow-x: hidden;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+          /* Fix grid for mobile */
+          .skills-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 12px !important;
+            padding: 0 8px !important;
+          }
+          
+          /* Fix card padding */
+          .skill-card {
+            padding: 20px 12px !important;
+          }
+          
+          .skill-icon {
+            font-size: 1.8rem !important;
+          }
+          
+          .skill-title {
+            font-size: 0.9rem !important;
+          }
+          
+          .skill-desc {
+            font-size: 0.7rem !important;
+          }
+          
+          /* Fix filters for mobile */
+          .filters {
+            gap: 8px !important;
+            padding: 0 8px !important;
+          }
+          
+          .filter-btn {
+            padding: 8px 16px !important;
+            font-size: 0.75rem !important;
+          }
+          
+          /* Fix legend for mobile */
+          .legend {
+            padding: 20px 16px !important;
+            margin: 0 16px !important;
+          }
+          
+          .legend-row {
+            gap: 16px !important;
+            flex-wrap: wrap !important;
+          }
+          
+          .legend-item {
+            gap: 6px !important;
+          }
+          
+          .legend-label {
+            font-size: 0.75rem !important;
+          }
+          
+          .legend-range {
+            font-size: 0.65rem !important;
+          }
+          
+          /* Fix section padding */
+          section {
+            padding: 100px 16px 40px !important;
+          }
+          
+          .subtitle {
+            font-size: 0.9rem !important;
+            padding: 0 8px !important;
+          }
+          
+          .heading {
+            font-size: 1.8rem !important;
+            padding: 0 8px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .skills-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 10px !important;
+          }
+          
+          .skill-card {
+            padding: 16px 10px !important;
+          }
+          
+          .skill-icon {
+            font-size: 1.5rem !important;
+            margin-bottom: 8px !important;
+          }
+          
+          .skill-title {
+            font-size: 0.85rem !important;
+            margin-bottom: 8px !important;
+          }
+          
+          .skill-desc {
+            font-size: 0.65rem !important;
+            margin-top: 6px !important;
+          }
+          
+          .level-text {
+            font-size: 0.65rem !important;
+          }
+          
+          .filter-btn {
+            padding: 6px 12px !important;
+            font-size: 0.7rem !important;
+          }
+          
+          .legend {
+            padding: 16px 12px !important;
+          }
+          
+          .legend-row {
+            gap: 12px !important;
+          }
         }
       `}</style>
     </PageTransition>
@@ -164,7 +290,6 @@ const skills = [
 ];
 
 const cs = { 
-
   page: {
     minHeight: '100vh', 
     backgroundColor: '#000000', 
