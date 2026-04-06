@@ -188,21 +188,37 @@ const About = () => {
           0%, 100% { opacity: 0.4; }
           50% { opacity: 0.7; }
         }
+        
+        /* Prevent horizontal scroll on all devices */
+        html, body {
+          overflow-x: hidden !important;
+          width: 100% !important;
+          position: relative !important;
+        }
+        
         * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
         }
+        
         body {
           overflow-x: hidden;
         }
 
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
+          /* Prevent horizontal scroll */
+          .page-container, .about-page {
+            overflow-x: hidden !important;
+            width: 100% !important;
+          }
+          
           /* Decrease white developer card size */
           .visual-card {
-            width: 280px !important;
-            height: 340px !important;
+            width: 260px !important;
+            height: 320px !important;
+            margin: 0 auto !important;
           }
           
           .visual-card .layer {
@@ -210,18 +226,27 @@ const About = () => {
           }
           
           .code-text {
-            font-size: 1.2rem !important;
+            font-size: 1.1rem !important;
           }
           
           .badge {
-            padding: 6px 12px !important;
-            font-size: 0.7rem !important;
+            padding: 5px 10px !important;
+            font-size: 0.65rem !important;
           }
           
           .badge svg {
-            font-size: 0.7rem !important;
-            width: 12px !important;
-            height: 12px !important;
+            font-size: 0.65rem !important;
+            width: 10px !important;
+            height: 10px !important;
+          }
+          
+          /* Fix timeline padding for mobile */
+          .timeline {
+            padding-left: 20px !important;
+          }
+          
+          .dot {
+            left: -29px !important;
           }
           
           /* Make tools grid 2 cards per row */
@@ -235,28 +260,35 @@ const About = () => {
             min-width: auto !important;
             padding: 20px 16px !important;
           }
+          
+          /* Fix section padding for mobile */
+          section {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+            overflow-x: hidden !important;
+          }
         }
 
         @media (max-width: 480px) {
           /* Further reduce card size on very small screens */
           .visual-card {
-            width: 240px !important;
-            height: 300px !important;
+            width: 220px !important;
+            height: 280px !important;
           }
           
           .badge {
-            padding: 4px 10px !important;
-            font-size: 0.6rem !important;
+            padding: 4px 8px !important;
+            font-size: 0.55rem !important;
           }
           
           .badge svg {
-            font-size: 0.6rem !important;
-            width: 10px !important;
-            height: 10px !important;
+            font-size: 0.55rem !important;
+            width: 8px !important;
+            height: 8px !important;
           }
           
           .code-text {
-            font-size: 1rem !important;
+            font-size: 0.9rem !important;
           }
           
           .tools-row {
@@ -264,15 +296,15 @@ const About = () => {
           }
           
           .tool-item {
-            padding: 16px 12px !important;
+            padding: 14px 10px !important;
           }
           
           .tool-emoji {
-            font-size: 2rem !important;
+            font-size: 1.8rem !important;
           }
           
           .tool-name {
-            font-size: 0.9rem !important;
+            font-size: 0.85rem !important;
           }
         }
       `}</style>
