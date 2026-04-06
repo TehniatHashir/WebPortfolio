@@ -695,31 +695,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div
-            className="footer-image"
-            style={{
-              flex: '1 1 40%',
-              display: 'flex',
-              justifyContent: 'flex-end',
-              opacity: isVisible.contact !== undefined ? 1 : 0,
-              transform: isVisible.contact ? 'translateX(0)' : 'translateX(30px)',
-              transition: 'opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s',
-            }}
-          >
-            <div
-              style={{
-                width: '85%',
-                maxWidth: 400,
-                aspectRatio: '4/5',
-                borderRadius: '50%',
-                backgroundColor: '#1a1a1a',
-                border: '1px solid rgba(255,255,255,0.08)',
-                backgroundImage: 'url(/profile.jpg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            />
-          </div>
+          {/* Removed the image from footer - Let's work together section */}
         </div>
       </footer>
 
@@ -752,19 +728,19 @@ const Home = () => {
           .hero-container {
             flex-direction: column !important;
             gap: 40px !important;
-            padding: 80px 24px 60px !important;
+            padding: 40px 24px 60px !important;
           }
           
           .hero-image {
-            min-height: 400px !important;
+            min-height: 300px !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
           }
 
           .hero-image > div {
-            width: 280px !important;
-            height: 350px !important;
+            width: 220px !important;
+            height: 275px !important;
             max-width: none !important;
           }
 
@@ -790,15 +766,15 @@ const Home = () => {
           }
 
           .about-image {
-            min-height: 400px !important;
+            min-height: 300px !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
           }
 
           .about-image > div {
-            width: 280px !important;
-            height: 350px !important;
+            width: 220px !important;
+            height: 275px !important;
             max-width: none !important;
           }
 
@@ -828,18 +804,18 @@ const Home = () => {
           }
 
           .featured-items {
-            gap: 12px !important;
+            gap: 15px !important;
           }
 
           .featured-item {
-            width: 140px !important;
-            height: 90px !important;
+            width: 170px !important;
+            height: 110px !important;
           }
         }
 
         @media (max-width: 768px) {
           .hero-container {
-            padding: 60px 16px 40px !important;
+            padding: 30px 16px 40px !important;
           }
 
           .service-cards {
@@ -880,12 +856,12 @@ const Home = () => {
           }
 
           .featured-items {
-            gap: 8px !important;
+            gap: 12px !important;
           }
 
           .featured-item {
-            width: 120px !important;
-            height: 80px !important;
+            width: 160px !important;
+            height: 100px !important;
           }
 
           .footer-buttons {
@@ -907,8 +883,8 @@ const Home = () => {
           }
 
           .about-badge {
-            padding: 8px 12px !important;
-            font-size: 12px !important;
+            padding: 6px 12px !important;
+            font-size: 11px !important;
           }
 
           /* Mobile navbar spacing */
@@ -918,25 +894,25 @@ const Home = () => {
 
           /* Reduce gap between hero heading and description */
           .hero-heading {
-            margin-bottom: 12px !important;
+            margin-bottom: 8px !important;
           }
 
           /* Reduce button widths */
           .hero-button {
-            padding: 12px 20px !important;
-            font-size: 14px !important;
+            padding: 10px 16px !important;
+            font-size: 13px !important;
           }
         }
 
         @media (max-width: 480px) {
           .hero-container {
-            padding: 50px 12px 30px !important;
+            padding: 20px 12px 30px !important;
             gap: 20px !important;
           }
 
           .hero-heading {
             font-size: 24px !important;
-            margin-bottom: 12px !important;
+            margin-bottom: 8px !important;
           }
 
           .hero-description {
@@ -950,9 +926,10 @@ const Home = () => {
           }
 
           .hero-button {
-            width: 100% !important;
-            padding: 12px 20px !important;
-            font-size: 14px !important;
+            width: auto !important;
+            min-width: 140px !important;
+            padding: 10px 16px !important;
+            font-size: 13px !important;
           }
 
           .section-padding {
@@ -970,12 +947,12 @@ const Home = () => {
           }
 
           .featured-items {
-            gap: 8px !important;
+            gap: 12px !important;
           }
 
           .featured-item {
-            width: 100px !important;
-            height: 70px !important;
+            width: 160px !important;
+            height: 100px !important;
           }
 
           .service-grid-container {
@@ -1007,11 +984,11 @@ const Home = () => {
             font-size: 13px !important;
           }
 
-          .about-image, .footer-image {
-            max-width: 280px !important;
-            max-height: 350px !important;
-            width: 280px !important;
-            height: 350px !important;
+          .about-image {
+            max-width: 220px !important;
+            max-height: 275px !important;
+            width: 220px !important;
+            height: 275px !important;
           }
 
           .portfolio-grid {
