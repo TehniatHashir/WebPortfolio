@@ -161,11 +161,11 @@ const About = () => {
           <div style={s.sectionInner}>
             <span style={s.sectionTag}>Tools</span>
             <h2 style={s.sectionTitle}>Technologies I Love</h2>
-            <div style={s.toolsRow}>
+            <div className="tools-row" style={s.toolsRow}>
               {tools.map((t, i) => (
-                <div key={i} style={s.toolItem}>
-                  <span style={s.toolEmoji}>{t.icon}</span>
-                  <span style={s.toolName}>{t.name}</span>
+                <div key={i} className="tool-item" style={s.toolItem}>
+                  <span className="tool-emoji" style={s.toolEmoji}>{t.icon}</span>
+                  <span className="tool-name" style={s.toolName}>{t.name}</span>
                 </div>
               ))}
             </div>
@@ -193,6 +193,81 @@ const About = () => {
         }
         body {
           overflow-x: hidden;
+        }
+
+        /* Mobile Responsive Styles - Only for mobile, desktop unchanged */
+        @media (max-width: 768px) {
+          /* Decrease white developer card size */
+          .visual-card {
+            width: 280px !important;
+            height: 340px !important;
+          }
+          
+          .layer {
+            border-radius: 20px !important;
+          }
+          
+          .code-text {
+            font-size: 1.2rem !important;
+          }
+          
+          .badge {
+            padding: 6px 12px !important;
+            font-size: 0.7rem !important;
+          }
+          
+          .badge svg {
+            font-size: 0.7rem !important;
+          }
+          
+          /* Make tools grid 2 cards per row */
+          .tools-row {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 16px !important;
+          }
+          
+          .tool-item {
+            min-width: auto !important;
+            padding: 20px 16px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          /* Further reduce card size on very small screens */
+          .visual-card {
+            width: 240px !important;
+            height: 300px !important;
+          }
+          
+          .badge {
+            padding: 4px 10px !important;
+            font-size: 0.6rem !important;
+          }
+          
+          .badge svg {
+            font-size: 0.6rem !important;
+          }
+          
+          .code-text {
+            font-size: 1rem !important;
+          }
+          
+          .tools-row {
+            gap: 12px !important;
+          }
+          
+          .tool-item {
+            padding: 16px 12px !important;
+          }
+          
+          .tool-emoji {
+            font-size: 2rem !important;
+          }
+          
+          .tool-name {
+            font-size: 0.9rem !important;
+          }
         }
       `}</style>
     </PageTransition>
